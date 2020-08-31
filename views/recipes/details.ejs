@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %> 
+<body>
+    <!-- nav -->
+    <%- include('../partials/nav.ejs') %> 
+
+    <main id="content">
+        <div class="container py-5 py-lg-6">
+            <h1 class="display-1 py-3 text-light"><%= recipe.title.toLowerCase() %> </h1>
+            <hr class="border-3 border-white my-4 ml-0 text-left w-25">
+            <div class="row">
+                <div class="col-lg-8">
+                    <p class="lead text-secondary"><%= recipe.snippet %> </p>
+                    <p class="lead text-secondary">Created by: <%= recipe.author %> </p>
+                    <span class="badge badge-pill badge-info"><%= recipe.category %> </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-light">
+            <div class="card my-2" style="width: 25rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Ingredients</h5>
+                  <p class="card-text"><%= recipe.ingredients %> </p>
+                </div>
+              </div>
+              <div class="card my-2" style="width: 25rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Directions</h5>
+                  <p class="card-text"><%= recipe.directions %> </p>
+                </div>
+            </div>
+            <button type="button" data-doc="<%= recipe._id %>" class="btn btn-danger delete mt-5">Delete Recipe</button>
+        </div>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+    <script src="/javascripts/details.js"></script>
+</body>
+</html>
+

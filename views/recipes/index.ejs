@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %> 
+<body>
+    <!-- nav -->
+    <%- include('../partials/nav.ejs') %> 
+    
+    <main id="content">
+        <!-- hero area -->
+        <div class="container py-5 py-lg-6">
+            <h1 class="display-1 py-3 text-light">Create & share awesome recipes</h1>
+            <hr class="border-3 border-white my-4 ml-0 text-left w-25">
+            <div class="row">
+                <div class="col-lg-8">
+                    <p class="lead text-secondary">Recipe Club is for sharing your favourite recipes with your friends.</p>
+                </div>
+            </div>
+        </div>
+        <!-- recipe content -->
+
+        <div class="container">
+            <h2 class="display-4 text-light">All Recipes</h2>
+            <div class="row justify-content-left pt-4 mx-0">
+                <% if (recipes.length > 0) { %>
+                    <% recipes.forEach(recipe => { %>    
+                <a class="" href="/recipes/<%= recipe._id %>">
+                    <div class="col-sm pl-0">
+                        <div class="card text-white my-2" style="width: 20rem;">
+                            <div class="card-header text-info text-lowercase">
+                                <span class="badge badge-pill text-light"><%= recipe.category %></span>
+                            </div>
+                            <div class="card-body">
+                            <h5 class="card-title text-uppercase"><%= recipe.title %> </h5>
+                            <p class="card-text"><%= recipe.snippet  %> </p>  
+                            <span class="text-right text-muted">Rating: <%= recipe.rating  %>/5</span>                         
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <% }) %> 
+            <% } else { %>
+                <p>There are no recipes to display...</p>
+            <% } %>  
+            </div>
+        </div>
+    </main>
+
+
+    <%- include('../partials/footer.ejs') %>
+    <script src="/javascripts/cards.js"></script>
+</body>
+</html>

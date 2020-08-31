@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head.ejs') %> 
+<body>
+    <%- include('./partials/nav.ejs') %>
+    
+    <!-- hero -->
+    <div class="container py-5 py-lg-6">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h1 class="display-3 mb-4 text-light py-3">About</h1>
+                <hr class="border-3 border-white my-4 ml-0 text-left w-25">
+                <div class="row">
+                    <div class="col-lg-8 mb-4">
+                        <p class="lead text-white">We love food and sharing our recipes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-white text-black">
+        <div class="container py-2">
+            <div class="bg-white mt-n5 px-3 px-lg-0">
+                <div class="row justify-content-center py-4 py-lg-5">
+                    <div class="col-md-10 col-lg-8">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis hic autem, maiores ex dolorum eveniet officia in eos minima reprehenderit fuga nemo, placeat rerum temporibus corporis minus tenetur magni tempore.</p>
+                        <img class="img-fluid mt-3 mb-2" src="/images/aboutImg.jpg" alt="a photo of two orange sauces">
+                        <h2 class="mt-4">Our story</h2>
+                        <p>It bagan as a simple way to share our favorite recipes with our friends and family. We would get together and discover great food together and always say that we'd share the recipe one day....of course life gets busy and we'd always forget. So we created Recipe Club! This exlusive club easily allows club members to share thier favorite recipes with the rest of the club.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- sub error popup -->
+    <div class="alert alert-danger text-center" role="alert">
+        A simple danger alert—check it out!
+    </div>
+    
+    <%- include('./partials/newsletterSignUp.ejs') %> 
+
+    
+
+    <%- include('./partials/footer.ejs') %>
+
+    <script src="/javascripts/subs.js"></script>
+</body>
+</html>

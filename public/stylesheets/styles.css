@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+body {
+    background-color: black;
+    font-family: 'Lora';
+    padding-top: calc(4rem - 1px);
+}
+
+p, h1, h2, h3, a, ul{
+    text-decoration: none;
+}
+
+/* main-nav */
+.main-nav {
+    font-size: .875rem;
+}
+
+.main-nav .navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.main-nav .nav-link {
+    letter-spacing: 2px;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+/* card styles */
+a:hover {
+    text-decoration: none;
+    filter: hue-rotate(90deg);
+}
+
+.card {
+    background-color: #1e1e1e;
+}
+
+.beverage {
+    background-color: #e98635;
+}
+
+.mainCourse {
+    background-color: #ab3743;
+}
+
+.baking {
+    background-color: #ec5657;
+}
+
+.seafood {
+    background-color: #23b993;
+}
+
+.snack {
+    background-color: #2c2b4d;
+}
+
+/* details view styles */
+
+.delete:hover {
+    cursor: pointer;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.158);
+}
